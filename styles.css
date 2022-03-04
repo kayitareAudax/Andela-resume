@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Poppins;
+}
+.main-container{
+    display: flex;
+    flex-direction: row;
+    /* height:100vh; */
+    border:2px solid rgb(206, 206, 206);
+    border-radius: 12px;
+    margin: 20px 0px 20px 100px;
+    width: 80vw;
+}
+.sidebar{
+    width: 15%;
+    background-color: #002e58;
+    border-radius: 10px 0px 0px 12px;
+}
+.content{
+    width:80%;
+    height: 100%;
+    display: flex;
+    margin: 15px;
+    flex-direction: column;
+    font-size: 0.8em;
+    color: rgb(27, 26, 26);
+}
+.content .name{
+    font-weight: bold;
+    font-size: 1.8em;
+    color: #002e58;
+}
+.content .role{
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #002e58;
+}
+.contacts{
+    height: 4em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.first-row{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4em;
+}
+.icon{
+    color: white;
+    border-radius: 50%;
+    background-color: #002e58;
+    border: none;
+    padding: 4px 5px;
+    margin-right: 0.5em;
+    font-size: 0.7em;
+}
+.contact .text{
+    font-size: 0.9em;
+}
+.contact{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+.key{
+    font-weight:bold;
+}
+.explained{
+    margin-top: 10px;
+}
+.explained .bolded{
+    color: black;
+    font-weight: bold;
+}
+.my-works{
+    margin-top: 2em;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+}
+.header button{
+    /* padding: 6px 8px; */
+    width: 30px;
+    height: 28px;
+    color: #fff;
+    background-color: #002e58;
+    border-radius: 50%;
+    border: none;
+    margin-right: 10px;
+    text-align: center;
+}
+.header h2{
+    font-weight: bold;
+    color: #002e58;
+    font-size: 1.4em;
+}
+.major-list{
+    list-style-type: circle;
+    list-style-position: inside;
+    margin: 7px;
+}
+.major-list li{
+    font-weight: bold;
+    color: black;
+    font-size: 1em;
+    font-size: 1.2em;
+    list-style: none;
+}
+.timeline{
+    display: flex;
+    flex-direction: row;
+}
+.timeline span{
+    margin-left: -10em;
+    color: white;
+    font-size: 16px;
+}
+.major-list li::before{
+    content: ".";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #002e58; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 2em; /* Also needed for space (tweak if needed) */
+  /* margin-left: -1em;  */
+}
+.minor-list{
+    margin-left: 1.5em;
+}
+.minor-list li,p{
+    font-size: 1em;
+    opacity: 0.9;
+    font-weight: lighter;
+}
+.dot{
+    background-color: #002e58;
+    height: 2px;
+    width: 2px;
+}
