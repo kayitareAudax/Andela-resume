@@ -80,6 +80,16 @@ body{
 }
 .my-works{
     margin-top: 2em;
+    position: relative;
+}
+.my-works::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #002e58;
+    left: 14px;
+    z-index: -1;
 }
 .header{
     display: flex;
@@ -91,6 +101,7 @@ body{
     height: 28px;
     color: #fff;
     background-color: #002e58;
+    z-index: 1;
     border-radius: 50%;
     border: none;
     margin-right: 10px;
@@ -102,44 +113,87 @@ body{
     font-size: 1.4em;
 }
 .major-list{
-    list-style-type: circle;
-    list-style-position: inside;
-    margin: 7px;
+    margin-left: 2.5em;
 }
-.major-list li{
-    font-weight: bold;
-    color: black;
+.major-list .major-li{
     font-size: 1em;
-    font-size: 1.2em;
+    opacity: 0.9;
+    font-weight: lighter;
+    padding-bottom: 4px;
     list-style: none;
+    position: relative;
+}
+.major-list .major-li::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #002e58;
+    border-radius: 50%;
+    left: -22px;
+    top: 7px;
+}
+.minor-head{
+    color: black;
+    font-size: 1.2em !important;
+    /* color: red; */
+    font-weight: bold !important;
 }
 .timeline{
     display: flex;
     flex-direction: row;
 }
-.timeline span{
-    margin-left: -10em;
+ .timestamp{
+    /* margin-left: -10em; */
+    position: absolute;
+    left: -13em;
+    top: -10px;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
+    display: inline;
+    margin-top: 10px;
 }
-.major-list li::before{
-    content: ".";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: #002e58; /* Change the color */
-  font-weight: bold; /* If you want it to be bold */
-  display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 2em; /* Also needed for space (tweak if needed) */
-  /* margin-left: -1em;  */
+.time li{
+    margin: 0;
+    padding: 0;
 }
 .minor-list{
     margin-left: 1.5em;
+    list-style: circle;
 }
 .minor-list li,p{
     font-size: 1em;
     opacity: 0.9;
     font-weight: lighter;
 }
+.dot-container{
+    display: flex;
+    flex-direction: row;
+}
+.soft-rate{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.rating{
+    display: flex;
+    flex-direction: column;
+}
 .dot{
     background-color: #002e58;
-    height: 2px;
-    width: 2px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.dot-white{
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background-color: rgb(197, 195, 195) !important;
+}
+.rate-text{
+    font-size: 1em;
+    margin: 7px 0px 6px 12px;
 }
